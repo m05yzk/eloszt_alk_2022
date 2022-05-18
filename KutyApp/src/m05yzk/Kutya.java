@@ -8,6 +8,11 @@ public class Kutya {
     private String fajta;
     private String egeszseg;
 
+    public Kutya(String nev, String fajta) {
+        this.nev = nev;
+        this.fajta = fajta;
+        this.egeszseg = "Egészséges";
+    }
     public Kutya(String nev, String fajta, String egeszseg) {
         this.nev = nev;
         this.fajta = fajta;
