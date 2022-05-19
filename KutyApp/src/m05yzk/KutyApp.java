@@ -23,7 +23,11 @@ public class KutyApp {
     
     public static void main(String[] args) {
         kutyaFeltoltes();
-        kiIrTeszt();
+        //kiIrTeszt();
+        System.out.println("Teljes kutyalista:");
+        kutyaKiIras(kutyak);
+        System.out.println("Kutyalista rendezve:");
+        
         
         
     }
@@ -50,6 +54,8 @@ public class KutyApp {
     
     }
     
+    
+    
     //fájl beolvasása soronként:
     private static List<String> fajlBeolvasas(String fajlNev){
         
@@ -66,13 +72,36 @@ public class KutyApp {
         for (String s : kutyanevek){
             System.out.println(s);
         }*/
+        /* összes kutya adata kiírva:
         System.out.println("Kutyatömb:");
         for (Kutya s : kutyak){
             System.out.println(s);
-        }
+        }*/
+        
         
         System.out.println("VÉGE");
     }
+    
+    static void listKiIras (List<String> be){
+        System.out.println("List tartalma:");
+        for (String s : be){
+            System.out.println(s);
+        }
+    }
+    static void kutyaKiIras (List<Kutya> be){
+        System.out.println("List tartalma:");
+        for (Kutya s : be){
+            System.out.println(s);
+        }
+    }
+    
+    static void gazdaKiIras (List<Gazda> be){
+        System.out.println("List tartalma:");
+        for (Gazda s : be){
+            System.out.println(s);
+        }
+    }
+    
     
     //random sor ArrayListből:
     public static String randomSor(ArrayList<String> i) { 
