@@ -1,10 +1,13 @@
 
 package m05yzk;
 
+import java.util.ArrayList;
+
 
 public class Gazda {
     private String nev;
-    private Kutya[] kutyak;
+    private ArrayList<Kutya> sajatKutyak;
+   
 
     public Gazda(String nev) {
         this.nev = nev;
@@ -17,14 +20,12 @@ public class Gazda {
     public void setNev(String nev) {
         this.nev = nev;
     }
-
-    public Kutya[] getKutyak() {
-        return kutyak;
+    public ArrayList<Kutya> GazdaKutyai(){
+        
+        
     }
 
-    public void setKutyak(Kutya[] kutyak) {
-        this.kutyak = kutyak;
-    }
+
     
     
     

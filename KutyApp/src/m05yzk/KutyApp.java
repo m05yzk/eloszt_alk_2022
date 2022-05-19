@@ -27,6 +27,7 @@ public class KutyApp {
         
         
     }
+    //Kutyanevek és fajták betöltése:
     private static void kutyaFeltoltes() {
         
         kutyanevek= new ArrayList<>();
@@ -45,16 +46,11 @@ public class KutyApp {
         for (String s : kutyanevek){
             kutyak.add(new Kutya(s,randomSor(kutyafajtak)));
         }
-        Kutya elsoKutya = new Kutya(randomSor(kutyanevek),randomSor(kutyafajtak));
-        //Kutya masikKutya = new Kutya(masikKutya.get)
-        
-        //String ehh = new String();
-        
-         
+           
     
     }
     
-    
+    //fájl beolvasása soronként:
     private static List<String> fajlBeolvasas(String fajlNev){
         
         try {
@@ -66,20 +62,20 @@ public class KutyApp {
     }
     
     static void kiIrTeszt(){
-        System.out.println("Nevek:");
+        /*System.out.println("Nevek:");
         for (String s : kutyanevek){
             System.out.println(s);
-        }
-        System.out.println("Fajták");
-        for (String s : kutyafajtak){
+        }*/
+        System.out.println("Kutyatömb:");
+        for (Kutya s : kutyak){
             System.out.println(s);
         }
-        System.out.println(randomSor(kutyafajtak));
+        
         System.out.println("VÉGE");
     }
     
-    
-    public static String randomSor(ArrayList<String> i) {
+    //random sor ArrayListből:
+    public static String randomSor(ArrayList<String> i) { 
         return i.get(new Random().nextInt(i.size()));
 
     }

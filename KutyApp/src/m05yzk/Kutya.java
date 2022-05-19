@@ -7,17 +7,22 @@ public class Kutya {
     private String nev;
     private String fajta;
     private String egeszseg;
+    private boolean gazdanal;
 
     public Kutya(String nev, String fajta) {
         this.nev = nev;
         this.fajta = fajta;
         this.egeszseg = "Egészséges";
+        this.gazdanal = true;
     }
-    public Kutya(String nev, String fajta, String egeszseg) {
+
+    public Kutya(String nev, String fajta, String egeszseg, boolean gazdanal) {
         this.nev = nev;
         this.fajta = fajta;
         this.egeszseg = egeszseg;
+        this.gazdanal = gazdanal;
     }
+    
 
     public String getNev() {
         return nev;
@@ -39,7 +44,7 @@ public class Kutya {
     
     @Override
     public String toString() {
-        return "Kutya{" + "nev=" + nev + ", fajta=" + fajta + ", egeszseg=" + egeszseg + '}';
+        return "Név: " + nev + ", Fajta: " + fajta + ", Egészség: " + egeszseg;
     }
     
     
