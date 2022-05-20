@@ -1,8 +1,6 @@
 PRO-VET Klinika
-NIM-VET Klinika
 BOT-VET Klinika
 VAU-VET Klinika
 KEX-VET Klinika
 YAM-VET Klinika
 CIC-VET Klinika
-GAD-VET Klinika

@@ -38,6 +38,8 @@ public class KutyApp {
         System.out.println("Gazdák kutyái kutyanév szerint rendezve:");
         gazdaKutyaiKiIras();
         
+        System.out.println("Klinikák kutyái kutyanév szerint rendezve:");
+        klinikaKutyaiKiIras();
         
         
         
@@ -185,6 +187,14 @@ public class KutyApp {
         List<String> klinikaBe = fajlBeolvasas("src/source/klinikanevek.txt");        
         for (String k : klinikaBe){
             klinikak.add(new Klinika(k));
+        }
+    }
+    
+    private static void klinikaKutyaiKiIras(){
+        
+        for (Klinika k : klinikak){
+            System.out.println("Klinika: "+k.getKlinikaNev());
+            kutyaKiIras(k.kutyakNevSzerint());
         }
     }
 }
