@@ -23,19 +23,21 @@ public class KutyApp {
     
     public static void main(String[] args) {
         kutyaFeltoltes();
-        //kiIrTeszt();
-        System.out.println("Teljes kutyalista:");
-        kutyaKiIras(kutyak);
-        System.out.println("Kutyalista rendezve:");
-        
+        //System.out.println("Teljes kutyalista:");
+        //kutyaKiIras(kutyak);
+        gazdaFeltoltes();
+        //System.out.println("Gazdalista:");
+        //gazdaKiIras(gazdik);
+        //System.out.println("Gazda kutyái:");
+        kutyatGazdahoz();
         
         
     }
     //Kutyanevek és fajták betöltése:
     private static void kutyaFeltoltes() {
         
-        kutyanevek= new ArrayList<>();
-        kutyafajtak= new ArrayList<>();
+        kutyanevek = new ArrayList<>();
+        kutyafajtak = new ArrayList<>();
         List<String> kutyaNevBe = fajlBeolvasas("src/source/kutyanevek.txt");
         for (String s : kutyaNevBe){
             kutyanevek.add(s);
@@ -50,11 +52,28 @@ public class KutyApp {
         for (String s : kutyanevek){
             kutyak.add(new Kutya(s,randomSor(kutyafajtak)));
         }
-           
-    
     }
     
+    //Gazdák neveinek beolvasása és feltöltése
+    private static void gazdaFeltoltes(){
+        gazdik = new ArrayList<>();
+        List<String> gazdaBe = fajlBeolvasas("src/source/gazdanevek.txt");        
+        for (String s : gazdaBe){
+            gazdik.add(new Gazda(s));
+        }
+    }
     
+    private static void kutyatGazdahoz(){
+        for (Gazda g : gazdik){
+            
+            Kutya kuty = randomKutya(kutyak);
+            g.kutyatGazdahoz(kuty);
+            kutyak.remove(kuty);
+            System.out.println(g.toString()+"gazdához hozzárendelve: "+kuty.toString());
+            
+        }
+        
+    }
     
     //fájl beolvasása soronként:
     private static List<String> fajlBeolvasas(String fajlNev){
@@ -105,6 +124,10 @@ public class KutyApp {
     
     //random sor ArrayListből:
     public static String randomSor(ArrayList<String> i) { 
+        return i.get(new Random().nextInt(i.size()));
+
+    }
+    public static Kutya randomKutya(ArrayList<Kutya> i) { 
         return i.get(new Random().nextInt(i.size()));
 
     }

@@ -19,19 +19,16 @@ public class Kutya implements Comparable<Kutya>{
         this.fajta = fajta;
         this.egeszseg = "Egészséges";
         this.gazdanal = true;
-        this.gazdaNeve = "";
       
     }
 
-    public Kutya(String nev, String fajta, String egeszseg, boolean gazdanal, String gazdaNeve) {
-        this.nev = nev;
-        this.fajta = fajta;
-        this.egeszseg = egeszseg;
-        this.gazdanal = gazdanal;
-        this.gazdaNeve = gazdaNeve;
+    public String getFajta() {
+        return fajta;
     }
 
-    
+    public boolean isGazdanal() {
+        return gazdanal;
+    }
     
 
     public String getNev() {
@@ -50,11 +47,10 @@ public class Kutya implements Comparable<Kutya>{
         this.egeszseg = egeszseg;
     }
 
-     
     
     @Override
     public String toString() {
-        return "Név: " + nev + ", Fajta: " + fajta + ", Egészség: " + egeszseg;
+        return "Kutya neve: " + nev + ", Fajtája: " + fajta + ", Egészsége: " + egeszseg;
     }
  
 

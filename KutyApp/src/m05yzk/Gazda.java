@@ -10,18 +10,22 @@ public class Gazda implements Comparable<Gazda>{
     private String nev;
     private ArrayList<Kutya> sajatKutyak;
 
-       
-
+    
     public Gazda(String nev) {
         this.nev = nev;
+        this.sajatKutyak = new ArrayList<>();
     }
 
     public String getNev() {
         return nev;
     }
-    
-    public ArrayList<Kutya> GazdaKutyai(){
+
+    public ArrayList<Kutya> getSajatKutyak() {
         return sajatKutyak;
+    }
+    
+    public String GazdaKutyai(){
+        return sajatKutyak.toString();
         
     }
     public void kutyatGazdahoz(Kutya kutya){
@@ -46,6 +50,12 @@ public class Gazda implements Comparable<Gazda>{
         
         
     }
+
+    @Override
+    public String toString() {
+        return "Gazda neve: " + nev;
+    }
+    
     
     
 
