@@ -16,8 +16,7 @@ public class KutyApp {
     private static List<String> stringLista;
     private static ArrayList<String> kutyanevek;
     private static ArrayList<String> kutyafajtak;
-    
-    
+        
     private static ArrayList<Kutya> kutyak;
     private static ArrayList<Gazda> gazdik;
     
@@ -28,12 +27,14 @@ public class KutyApp {
         gazdaFeltoltes();
         //System.out.println("Gazdalista:");
         //gazdaKiIras(gazdik);
-        //System.out.println("Gazda kutyái:");
+        
         kutyatGazdahoz();
+        System.out.println("Gazdák kutyái kutyanév szerint rendezve:");
+        gazdaKutyaiKiIras();
         
         
     }
-    //Kutyanevek és fajták betöltése:
+    //Kutyanevek és fajták beolvasása és feltöltése:
     private static void kutyaFeltoltes() {
         
         kutyanevek = new ArrayList<>();
@@ -81,7 +82,7 @@ public class KutyApp {
         
     }
     
-    //fájl beolvasása soronként:
+    //fájl beolvasása soronként órai példa alapján
     private static List<String> fajlBeolvasas(String fajlNev){
         
         try {
@@ -108,26 +109,21 @@ public class KutyApp {
     }
     
     static void listKiIras (List<String> be){
-        System.out.println("List tartalma:");
         for (String s : be){
             System.out.println(s);
         }
     }
     static void kutyaKiIras (List<Kutya> be){
-        System.out.println("List tartalma:");
-        for (Kutya s : be){
+         for (Kutya s : be){
             System.out.println(s);
         }
     }
-    
     static void gazdaKiIras (List<Gazda> be){
-        System.out.println("List tartalma:");
         for (Gazda s : be){
             System.out.println(s);
         }
     }
-    
-    
+        
     //random sor ArrayListből:
     public static String randomSor(ArrayList<String> i) { 
         return i.get(new Random().nextInt(i.size()));
@@ -137,4 +133,15 @@ public class KutyApp {
         return i.get(new Random().nextInt(i.size()));
 
     }
+    
+    //Gazdák kutyái kutyanév szerint rendezve
+    private static void gazdaKutyaiKiIras(){
+        
+        for (Gazda g : gazdik){
+            System.out.println("Gazda: "+g.getNev());
+            kutyaKiIras(g.kutyakNevSzerint());
+        }
+    }
+    
 }
+
