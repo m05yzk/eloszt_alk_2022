@@ -1,0 +1,16 @@
+KIP-VET Klinika
+TOW-VET Klinika
+ORF-VET Klinika
+KIR-VET Klinika
+PRO-VET Klinika
+NIM-VET Klinika
+BOT-VET Klinika
+PER-VET Klinika
+VAU-VET Klinika
+FUB-VET Klinika
+GAT-VET Klinika
+KEX-VET Klinika
+YAM-VET Klinika
+CIC-VET Klinika
+GAD-VET Klinika
+BIS-VET Klinika

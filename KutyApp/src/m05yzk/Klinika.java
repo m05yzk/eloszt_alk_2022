@@ -1,6 +1,7 @@
 
 package m05yzk;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Klinika {
     
@@ -8,6 +9,13 @@ public class Klinika {
     private int kapacitas;
     private ArrayList<Kutya> felvettKutyak;
 
+    public Klinika(String klinikaNev) {
+        this.klinikaNev = klinikaNev;
+        this.kapacitas = new Random().nextInt(2, 5);
+        this.felvettKutyak = new ArrayList<>();
+    }
+
+    
     public String getKlinikaNev() {
         return klinikaNev;
     }
@@ -22,6 +30,8 @@ public class Klinika {
     }
 
     public void KutyaFelvetel(Kutya kutya){
+        
+        
         felvettKutyak.add(kutya);
         
     }

@@ -19,6 +19,7 @@ public class KutyApp {
         
     private static ArrayList<Kutya> kutyak;
     private static ArrayList<Gazda> gazdik;
+    private static ArrayList<Klinika> klinikak;
     
     public static void main(String[] args) {
         kutyaFeltoltes();
@@ -27,10 +28,18 @@ public class KutyApp {
         gazdaFeltoltes();
         //System.out.println("Gazdalista:");
         //gazdaKiIras(gazdik);
-        
         kutyatGazdahoz();
+        klinikaFelToltes();
+        
+        
+        
+        //innentől lehetne gombokra rakni
         System.out.println("Gazdák kutyái kutyanév szerint rendezve:");
         gazdaKutyaiKiIras();
+        
+        
+        
+        
         
         
     }
@@ -143,5 +152,13 @@ public class KutyApp {
         }
     }
     
+    //Klinikák nevének beolvasása és létrehozásuk
+    private static void klinikaFelToltes(){
+        klinikak = new ArrayList<>();
+        List<String> klinikaBe = fajlBeolvasas("src/source/klinikanevek.txt");        
+        for (String k : klinikaBe){
+            klinikak.add(new Klinika(k));
+        }
+    }
 }
 
