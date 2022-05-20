@@ -63,14 +63,20 @@ public class KutyApp {
         }
     }
     
+    //Gazdákhoz kutyák rendelése és kutyák listáról levétele
     private static void kutyatGazdahoz(){
+        
+        
         for (Gazda g : gazdik){
             
-            Kutya kuty = randomKutya(kutyak);
-            g.kutyatGazdahoz(kuty);
-            kutyak.remove(kuty);
-            System.out.println(g.toString()+"gazdához hozzárendelve: "+kuty.toString());
+            for (int i = new Random().nextInt(1, 4); i > 0; i--) {
+                Kutya kuty = randomKutya(kutyak);
+                g.kutyatGazdahoz(kuty);
+                kutyak.remove(kuty);
+                System.out.println(g.getNev()+" gazdához hozzárendelve: "+kuty.getNev()+", "+kuty.getFajta());
             
+}
+           
         }
         
     }

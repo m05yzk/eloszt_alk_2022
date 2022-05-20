@@ -1,17 +1,17 @@
-Agár
-Beagle
-Golden retriever
-Magyar vizsla
-Német juhászkutya
-Bulldog
-Border collie
-Cane corso
-Staffordshire terrier
-Tacskó
-Puli
-Havanese
-Labrador
-Keverék
-Rottweiler
-Kuvasz
-Komondor
+agár
+beagle
+golden retriever
+magyar vizsla
+német juhászkutya
+bulldog
+border collie
+cane corso
+staffordshire terrier
+tacskó
+puli
+havanese
+labrador
+keverék
+rottweiler
+kuvasz
+komondor
