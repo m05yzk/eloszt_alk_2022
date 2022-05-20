@@ -28,12 +28,13 @@ public class KutyApp {
         gazdaFeltoltes();
         //System.out.println("Gazdalista:");
         //gazdaKiIras(gazdik);
-        kutyatGazdahoz();
+        kutyakSzetOsztasa();
         klinikaFelToltes();
         
+        kutyatKlinikaba();
         
         
-        //innentől lehetne gombokra rakni
+        //ezt lehetne gombra rakni
         System.out.println("Gazdák kutyái kutyanév szerint rendezve:");
         gazdaKutyaiKiIras();
         
@@ -74,7 +75,7 @@ public class KutyApp {
     }
     
     //Gazdákhoz kutyák rendelése és kutyák listáról levétele
-    private static void kutyatGazdahoz(){
+    private static void kutyakSzetOsztasa(){
         
         
         for (Gazda g : gazdik){
@@ -85,9 +86,35 @@ public class KutyApp {
                 kutyak.remove(kuty);
                 System.out.println(g.getNev()+" gazdához hozzárendelve: "+kuty.getNev()+", "+kuty.getFajta());
             
-}
-           
+            }
         }
+    }
+    
+    
+    //Kutyákat klinikába random móon, avagy megbetegítések:
+    private static void kutyatKlinikaba(){
+        
+        for (Klinika c : klinikak) {
+            while (c.getFelvettKutyak().size() + 1 < c.getKapacitas()) {
+                Kutya rkuty = randomKutya(kutyak);
+              
+                if (rkuty.isGazdanal() == true) {
+                    
+                    c.KutyaFelvetel(rkuty);
+                    
+                }
+                
+        
+                
+            }
+            
+        }
+        
+        
+        
+        
+        
+        
         
     }
     

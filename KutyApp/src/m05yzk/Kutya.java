@@ -29,6 +29,11 @@ public class Kutya implements Comparable<Kutya>{
     public boolean isGazdanal() {
         return gazdanal;
     }
+
+    public void setGazdanal(boolean gazdanal) {
+        this.gazdanal = gazdanal;
+    }
+    
     
 
     public String getNev() {
